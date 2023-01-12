@@ -1,0 +1,9 @@
+src
+pnpm-lock.yaml
+tsconfig.build.cjs.json
+tsconfig.build.esm.json
+tsconfig.build.types.json
+tsconfig.json
+node_modules
+.gitignore
+.github

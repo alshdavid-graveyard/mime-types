@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "Node16",
+      "target": "ESNext",
+      "preserveWatchOutput": true,
+      "lib": ["DOM", "ESNext"],
+      "types": [
+        "@types/node",
+        "@types/jest",
+      ]
+  },
+  "include": [
+      "src/**/*.spec.ts",
+  ]
+}

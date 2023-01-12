@@ -1,10 +1,4 @@
-# mime-types
-
-[![NPM Version][npm-version-image]][npm-url]
-[![NPM Downloads][npm-downloads-image]][npm-url]
-[![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][ci-image]][ci-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
+# JavaScript `mime-types` - TypeScript Edition
 
 The ultimate javascript content-type utility.
 
@@ -21,39 +15,25 @@ Otherwise, the API is compatible with `mime` 1.x.
 
 ## Install
 
-This is a [Node.js](https://nodejs.org/en/) module available through the
-[npm registry](https://www.npmjs.com/). Installation is done using the
-[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+This package has no dependencies and uses no node.js specific APIs. This works in any JavaScript runtime, including Node.js and the Browser.
+
+You can install this via NPM:
 
 ```sh
-$ npm install mime-types
+$ npm install @alshdavid/mime-types
 ```
 
 ## Adding Types
 
-All mime types are based on [mime-db](https://www.npmjs.com/package/mime-db),
-so open a PR there if you'd like to add mime types.
+All mime types are based on [an object](./src/mime-db.ts) containing all the mime types (known as the mime-db), feel free to open a PR to expand the list of mime types.
 
 ## API
 
+This package offers imports for CommonJS, ES Modules. Node will automatically select the import type relevant for it. Bundlers like Parcel, Webpack, Rollup will likewise consume the package via ES Modules.
+
 ```js
 var mime = require('mime-types')
-```
-
-All functions return `false` if input is invalid or not found.
-
-### mime.lookup(path)
-
-Lookup the content-type associated with a file.
-
-```js
-mime.lookup('json') // 'application/json'
-mime.lookup('.md') // 'text/markdown'
-mime.lookup('file.html') // 'text/html'
-mime.lookup('folder/file.js') // 'application/javascript'
-mime.lookup('folder/.htaccess') // false
-
-mime.lookup('cats') // false
+import * as mime from 'mime-types'
 ```
 
 ### mime.contentType(type)
@@ -74,40 +54,6 @@ mime.contentType('text/html; charset=iso-8859-1') // 'text/html; charset=iso-885
 mime.contentType(path.extname('/path/to/file.json')) // 'application/json; charset=utf-8'
 ```
 
-### mime.extension(type)
-
-Get the default extension for a content-type.
-
-```js
-mime.extension('application/octet-stream') // 'bin'
-```
-
-### mime.charset(type)
-
-Lookup the implied default charset of a content-type.
-
-```js
-mime.charset('text/markdown') // 'UTF-8'
-```
-
-### var type = mime.types[extension]
-
-A map of content-types by extension.
-
-### [extensions...] = mime.extensions[type]
-
-A map of extensions by content-type.
-
 ## License
 
 [MIT](LICENSE)
-
-[ci-image]: https://badgen.net/github/checks/jshttp/mime-types/master?label=ci
-[ci-url]: https://github.com/jshttp/mime-types/actions/workflows/ci.yml
-[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/mime-types/master
-[coveralls-url]: https://coveralls.io/r/jshttp/mime-types?branch=master
-[node-version-image]: https://badgen.net/npm/node/mime-types
-[node-version-url]: https://nodejs.org/en/download
-[npm-downloads-image]: https://badgen.net/npm/dm/mime-types
-[npm-url]: https://npmjs.org/package/mime-types
-[npm-version-image]: https://badgen.net/npm/v/mime-types
