@@ -1,6 +1,6 @@
 {
   "name": "@alshdavid/mime-types",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "The ultimate javascript content-type utility.",
   "keywords": [
     "mime",

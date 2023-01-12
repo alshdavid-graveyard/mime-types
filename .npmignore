@@ -3,7 +3,10 @@ pnpm-lock.yaml
 tsconfig.build.cjs.json
 tsconfig.build.esm.json
 tsconfig.build.types.json
+tsconfig.build.tests.json
 tsconfig.json
 node_modules
 .gitignore
 .github
+.prettierrc
+jest.config.js
