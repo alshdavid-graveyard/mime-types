@@ -14,7 +14,7 @@ $ npm install @alshdavid/mime-types
 
 ## Adding Types
 
-All mime types are based on [an object](./src/mime-db.ts) containing all the mime types (known as the mime-db), feel free to open a PR to expand the list of mime types.
+All mime types are based on [an object](https://github.com/alshdavid/mime-types/blob/main/src/mime-databse.ts) containing all the mime types (known as the mime-db), feel free to open a PR to expand the list of mime types.
 
 ## API
 
