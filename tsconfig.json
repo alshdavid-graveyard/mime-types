@@ -1,18 +1,13 @@
 {
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
-        "moduleResolution": "Classic",
-        "target": "ESNext",
-        "preserveWatchOutput": true,
-        "lib": ["DOM", "ESNext"],
-        "types": [
-          "@types/node",
-        ]
-    },
-    "include": [
-        "src/**/*",
-    ],
-    "exclude": [
-      "src/**/*.spec.ts",
-    ]
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node16",
+    "target": "ESNext",
+    "preserveWatchOutput": true,
+    "lib": ["ESNext"],
+    "strict": true,
+    "types": ["@types/node"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts"]
 }

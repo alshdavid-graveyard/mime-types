@@ -1,3 +1,7 @@
-// This is ripped from https://github.com/jshttp/mime-types
+// This is a fork of https://github.com/jshttp/mime-types
 
-export * from './mime.js'
+export * from './instance.js'
+export * from './mime-databse.js'
+export * from './mime-type-parser-interface.js'
+export * from './mime-types-parser.js'
+export * from './preference.js'

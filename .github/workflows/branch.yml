@@ -3,7 +3,8 @@ name: ci
 on:
   push:
     branches: 
-    - 'main'
+    - '*'
+    - '!main'
 
 jobs:
   build:
@@ -16,13 +17,12 @@ jobs:
       with:
         node-version: 18
 
-    - name: build and release
+    - name: build and test
       run: |
         set -e
         npm install
         npm run build
-        npm publish --access public --no-git-checks
+        npm run test
       env:
         CI: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

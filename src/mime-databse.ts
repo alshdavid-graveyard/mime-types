@@ -7,7 +7,7 @@ export type MimeEntry = {
 
 export type MimeDatabase = Record<string, MimeEntry>
 
-export const db: MimeDatabase = {
+export const mimeDatabase: MimeDatabase = {
   "application/1d-interleaved-parityfec": {
     "source": "iana"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@alshdavid/mime-types",
-  "version": "0.0.0",
+  "version": "2.2.0",
   "description": "The ultimate javascript content-type utility.",
   "keywords": [
     "mime",
@@ -26,6 +26,7 @@
     "build:cjs": "npm run clean:cjs && npx tsc -p ./tsconfig.build.cjs.json",
     "build:esm": "npm run clean:esm && npx tsc -p ./tsconfig.build.esm.json",
     "build:types": "npm run clean:types && npx tsc -p ./tsconfig.build.types.json",
+    "build:tests": "npx tsc -p ./tsconfig.build.tests.json",
     "clean": "npx concurrently npm:clean:*",
     "clean:cjs": "rm -rf cjs",
     "clean:esm": "rm -rf esm",
@@ -33,7 +34,8 @@
     "watch": "npx concurrently npm:watch:*",
     "watch:cjs": "npm run clean:cjs && npx tsc -p ./tsconfig.build.cjs.json --watch",
     "watch:esm": "npm run clean:esm && npx tsc -p ./tsconfig.build.esm.json --watch",
-    "watch:types": "npm run clean:types && npx tsc -p ./tsconfig.build.types.json --watch"
+    "watch:types": "npm run clean:types && npx tsc -p ./tsconfig.build.types.json --watch",
+    "test": "npx jest src"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",

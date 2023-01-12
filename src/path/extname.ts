@@ -24,12 +24,12 @@ function validateString(value: any, name: string) {
     throw new Error(`${name}, ${value} is not a string`);
 }
 
-function isWindowsDeviceRoot(code) {
+function isWindowsDeviceRoot(code: number) {
   return (code >= Characters.CHAR_UPPERCASE_A && code <= Characters.CHAR_UPPERCASE_Z) ||
          (code >= Characters.CHAR_LOWERCASE_A && code <= Characters.CHAR_LOWERCASE_Z);
 }
 
-function isPathSeparator(code) {
+function isPathSeparator(code: number) {
   return code === Characters.CHAR_FORWARD_SLASH || code === Characters.CHAR_BACKWARD_SLASH;
 }
 
