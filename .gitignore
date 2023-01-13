@@ -48,3 +48,4 @@ esm
 cjs
 types
 pnpm-lock.yaml
+package-lock.json

@@ -10,3 +10,6 @@ node_modules
 .github
 .prettierrc
 jest.config.js
+.scripts
+package-lock.json
+CONTRIBUTING.md

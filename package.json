@@ -1,6 +1,6 @@
 {
   "name": "@alshdavid/mime-types",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "The ultimate javascript content-type utility.",
   "keywords": [
     "mime",
@@ -22,25 +22,25 @@
     }
   },
   "scripts": {
-    "build": "npx concurrently npm:build:*",
-    "build:cjs": "npm run clean:cjs && npx tsc -p ./tsconfig.build.cjs.json",
-    "build:esm": "npm run clean:esm && npx tsc -p ./tsconfig.build.esm.json",
-    "build:types": "npm run clean:types && npx tsc -p ./tsconfig.build.types.json",
-    "build:tests": "npx tsc -p ./tsconfig.build.tests.json",
-    "clean": "npx concurrently npm:clean:*",
-    "clean:cjs": "rm -rf cjs",
-    "clean:esm": "rm -rf esm",
-    "clean:types": "rm -rf types",
-    "watch": "npx concurrently npm:watch:*",
-    "watch:cjs": "npm run clean:cjs && npx tsc -p ./tsconfig.build.cjs.json --watch",
-    "watch:esm": "npm run clean:esm && npx tsc -p ./tsconfig.build.esm.json --watch",
-    "watch:types": "npm run clean:types && npx tsc -p ./tsconfig.build.types.json --watch",
-    "test": "npx jest src"
+    "script": "node ./.scripts/cmd/main.mjs",
+    "build": "npm run script build",
+    "build:cjs": "npm run script build:cjs",
+    "build:esm": "npm run script build:esm",
+    "build:types": "npm run script build:types",
+    "build:tests": "npm run script build:tests",
+    "clean": "npm run script clean",
+    "clean:cjs": "npm run script clean:cjs",
+    "clean:esm": "npm run script clean:esm",
+    "clean:types": "npm run script clean:types",
+    "watch": "npm run script watch",
+    "watch:cjs": "npm run script watch:cjs",
+    "watch:esm": "npm run script watch:esm",
+    "watch:types": "npm run script watch:types",
+    "test": "npm run script test"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",
     "@types/node": "^18.11.18",
-    "concurrently": "^7.6.0",
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.4"

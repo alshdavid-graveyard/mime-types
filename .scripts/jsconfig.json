@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "strict": true,
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": [
+    "cmd/**/*.mjs",
+    "platform/**/*.mjs"
+  ]
+}
